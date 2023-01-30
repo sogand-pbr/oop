@@ -68,7 +68,7 @@
     class Square{
             use Border,Bg,size;
 
-            public function  __construct()
+            public function __construct()
             {
                 $this->makeBg('red');
                 $this->makeBorder('2px solid black');
@@ -80,6 +80,7 @@
 
     }
 
+    $sq=new Square();
 
 
 
