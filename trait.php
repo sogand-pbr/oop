@@ -6,7 +6,7 @@
 
         function makeBg($color)
         {
-            $this->style .= 'background:' . $color . ";";
+            $this->style .= 'background: ' . $color . ';';
         }
     }
 
@@ -27,7 +27,7 @@
 
         function makeRadius()
         {
-            $this->style .= "border-redius:50%;";
+            $this->style .= "border-radius:50%;";
         }
 
     }
@@ -38,7 +38,7 @@
 
         function makeBorder($border)
         {
-            $this->style .= 'border:' . $border . ';';
+            $this->style .= 'border: ' . $border . ';';
         }
 
     }
@@ -49,8 +49,8 @@
 
         function makeSize($w, $h)
         {
-            $this->style .='width' . $w .'px;';
-            $this->style .='height' . $h . 'px;';
+            $this->style .='width: ' . $w .'px;';
+            $this->style .='height: ' . $h . 'px;';
         }
 
     }
@@ -65,7 +65,20 @@
 
     }
 
+    class Square{
+            use Border,Bg,size;
 
+            public function  __construct()
+            {
+                $this->makeBg('red');
+                $this->makeBorder('2px solid black');
+                $this->makeSize(220,220);
+
+                echo '<div style="'.$this->style. '"></div>';
+
+            }
+
+    }
 
 
 
